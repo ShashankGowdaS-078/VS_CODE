@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .btn {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #6b2e00;
+        }
+
+        button {
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .content h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .content button {
+            margin: 10px;
+        }
+        .container {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 30% 30% 30%;
+        }
+
+        .grid-item {
+            width: auto;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .feature {
+        flex: 1 1 30%;
+        padding: 1rem;
+        margin: 0.5rem;
+        background: #f9f9f9;
+        border-radius: 1px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .feature h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .feature p {
+    font-size: 1rem;
+    }   
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007acc;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }  
+        .container1 {
+            display: grid;
+            grid-template-columns: 23% 23% 23% 23%;
+            gap: 20px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .card img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="https://code.visualstudio.com/">Home</a>
+        <a href="#">Account</a>
+        <a href="https://code.visualstudio.com/docs">Docs</a>
+        <a href="https://code.visualstudio.com/updates/v1_96">Update</a>
+        <a href="https://code.visualstudio.com/blogs">Blog</a>
+        <a href="https://code.visualstudio.com/api">API</a>
+        <a href="https://marketplace.visualstudio.com/VSCode">Extensions</a>
+        <a href="https://code.visualstudio.com/docs/copilot/overview">GitHub Co-pilot</a>
+        <button id="b1" onclick="toggleDarkMode()">Dark mode</button>
+        <input type="text" placeholder="Search VSCODE">
+        <button>Search</button>
+        <button type="button" class="btn">Download</button>
+    </nav>
+
+    <div class="content">
+        <p id="myDI">Get <a href="#">GitHub Co-pilot Free</a> in VS Code!</p>
+        <h1 id="myDIV">Your code editor.<br> Redefined with AI</h1>
+        <button type="button" class="btn">Download for Windows</button>
+        <button type="button" class="btn">Get Co-pilot Free</button>
+    </div>
+    <center><video src="WhatsApp Video 2025-01-08 at 2.23.42 PM.mp4" id ="myVideo" autoplay muted></video><br>
+    <button onclick="playVid()" type="button">Play Video</button>
+    <button onclick="pauseVid()" type="button">Pause Video</button><br></center>     
+    <section class="feature-section">
+        <div class="container">
+            <div class="feature">
+                <h3>Choose the model that works for you</h3>
+                <p>Pick the model that works best for your project and team, including GPT 4o and Claude Sonnet.</p>
+                <img src="choose-model-light.webp" alt="Model selection dropdown" height="200px" width="250px">
+            </div>
+            <div class="feature">
+                <h3>An expert on your codebase</h3>
+                <p>Copilot locally indexes your codebase to understand what’s relevant and supplements that context to interactions with Copilot.</p>
+                <img src="multi-file-light.webp" alt="Codebase indexing screenshot" height="200px" width="250px">
+            </div>
+            <div class="feature">
+                <h3>Personalized to your needs</h3>
+                <p>Copilot works the way you do. Customize Copilot's prompts with details about your team's workflows, tools, and projects.</p>
+                <img src="instructions-light.webp" alt="Custom prompt configuration" height="200px" width="250px">
+            </div>
+            </div>
+            <center><h1>Code with rich features</h1>
+               <p> There's a lot more to an editor. Whether it's using built-in features or <br> rich extensions, there's something for everyone.</p></center>
+            <div class="container1">
+                <div class="card">
+                    <button><a href="https://code.visualstudio.com/docs/terminal/basics"><img src="c-terminal.svg" alt="Integrated Terminal"></a></button>
+                    <h3>Integrated Terminal</h3>
+                    <p>Use your favorite shell whether it's zsh, pwsh, or git bash, all inside the editor.</p>
+                </div>
+                <div class="card">
+                    <button><a href="https://code.visualstudio.com/docs/editor/debugging"><img src="c-run.svg" alt="Run Code"></a></button>
+                    <h3>Run Code</h3>
+                    <p>Run and debug your code without leaving your editor.</p>
+                </div>
+                <div class="card">
+                    <button><a href="https://code.visualstudio.com/docs/sourcecontrol/overview"><img src="c-version-control.svg" alt="Version Control"></a></button>
+                    <h3>Version Control</h3>
+                    <p>Built-in support for git and many other source control providers.</p>
+                </div>
+                <div class="card">
+                    <button><a href="https://code.visualstudio.com/docs/editor/tasks"><img src="c-build-tasks.svg" alt="Build Tasks"></a></button>
+                    <h3>Build Tasks</h3>
+                    <p>Run tools and analyze their results from within VS Code.</p>
+                </div>
+                <div class="card">
+                    <button><a href="https://code.visualstudio.com/updates/v1_66#_local-history"><img src="c-local-history.svg" alt="Local History"></a></button>
+                    <h3>Local History</h3>
+                    <p>Never lose your changes with automatically tracked local history.</p>
+                </div>
+                <div class="card">
+                    <button><a href="https://code.visualstudio.com/docs/getstarted/themes"><img src="c-themes.svg" alt="Themes"></a></button>
+                    <h3>Themes</h3>
+                    <p>Your theme is an extension of your personality. Add some flair to your editor and add your touch.</p>
+                </div>
+                <div class="card">
+                    <button><a href="https://code.visualstudio.com/docs/editor/accessibility"><img src="c-accessibility.svg" alt="Accessibility"></a></button>
+                    <h3>Accessibility</h3>
+                    <p>Optimized experience for screen readers, high contrast themes, and keyboard-only navigation.</p>
+                </div>
+                <div class="card">
+                    <button><a href="https://code.visualstudio.com/docs/editor/vscode-web"><img src="c-web.svg" alt="Web Support"></a></button>
+                    <h3>Web Support</h3>
+                    <p>Whether you are on your phone, tablet, or desktop, you can access your code from anywhere.</p>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Visual Studio Code. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleDarkMode() {
+            var body = document.body;
+            var div = document.getElementById("myDIV");
+
+            var button = document.getElementById("b1");
+            if (body.style.backgroundColor === "black") {
+                body.style.backgroundColor = "white"; 
+                div.style.color = "black";  
+                button.textContent= "Dark mode"        
+            } else {
+                body.style.backgroundColor = "black"; 
+                div.style.color = "white";
+                 button.textContent= "Light mode"            
+            }
+        }
+    let vid = document.getElementById("myVideo");
+    function playVid() {
+    vid.play();
+    }
+    function pauseVid() {
+    vid.pause();
+    }
+        </script>
+</body>
+</html>
